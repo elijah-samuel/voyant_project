@@ -1,0 +1,133 @@
+---
+title: "Project 1: Data Visualization with Voyant"
+author: "Elijah Samuel (Team Leader), Mansi Agarwal, Devin Gupta, Auntora Mitra"
+date: "15/09/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Research hypothesis
+
+Hypothesis:  This project uses prosperity and proximity to luxury in the material world of Louisa May Alcott and Mark Twain to detect class differentiation. We expect Alcott to be more heavily populated with goods of luxury (relative to Twain) given their respective socio-economic backgrounds. 
+
+### Corpus Description
+
+We have two main corpora - one contains the novels written by Louisa May Alcott and the other contains novels authored by Mark Twain. We have also created one which has Aloctt’s works first,followed by that of Twain’s to make frequency comparison easier. We wanted to explore class differences in 19th century America by looking at the relative frequency with which words that proxy for wealth and poverty feature in the two corpora. Thus, our choice of corpora  was motivated by two reasons. First, we wanted to maximise the time overlap as much as possible between the two authors, given word usage and popularity changes with time. Alcott’s novels span 1865-1886 and Twain’s novels span 1873-1896. Second, we wanted to contrast authors with different socio-economic backgrounds. To loosely categorise it, Louisa May Alcott belonged to the middle class and Mark Twain belonged to the lower class. However, there is also a difference in gender that creates a positive bias in our study given that, naturally, Louisa May Alcott occupies more of the domestic realm and a lot of Twain’s plots are set outdoors. It’s safe to assume that the domestic realm is more material than the outdoors. 
+
+### Summary Paragraph
+
+Louisa May Alcott’s corpus has 11 documents with 1,067,777 total words and 23,683 unique words. Her longest work is Little Women (1868) and shortest work is The Mysterious Key and What it Opened (1867). Generally, the trend in document length is increasing with time with Little Women as an outlier (It was her longest work but also one of her earliest). Incidentally, The Mysterious Key and What it Opened has the highest vocabulary density and Little Women has the lowest. Vocabulary density also increases with time with The Mysterious Key and What it Opened as an outlier (It was her most dense work but also one of her earliest). 
+Mark Twain’s corpus has 9 documents with 712,680 total words and 25,198 distinct words. His longest work is The Gilded Age- A tale of Today (1873), which is also his first novel, and his shortest work is Tom Sawyer, Detective (1896). Generally, the trend in document length is decreasing over time. The trend in vocabulary density is not as clear, but a trend line would show an increasing trend. Pudd’nhead Wilson (1894)  is his most dense work and Adventures of Huckleberry Finn (1884) is his least.
+In both the corpora, most of the distinct words are character names. Coincidentally, both their canonical works are ones with the low average words per sentence- Adventures of Tom Sawyer for Twain and Little Women for Louisa May Alcott, providing insight into one of the reasons why a work might become popular. 
+
+### Frequency Comparison 
+
+#### Corpora  
+**Louisa May Alcott**  
+<iframe style='width: 477px; height: 418px;' src='https://voyant-tools.org/tool/Cirrus/?corpus=9bcfd9b843a80a381848ca627337cdf8' data-external = '1'></iframe>
+
+**Mark Twain**  
+<iframe style='width: 477px; height: 418px;' src='https://voyant-tools.org/tool/Cirrus/?corpus=494fd393ab305bba9b7815e682282646' data-external = '1'></iframe>
+
+The most frequent words in the Alcott corpus are **said**, **little**, **like**, **good** and **old**.  The most frequently used words in Twain are **said**, **tom**, **got**, **time** and **good**. Studying their trend over time does not reveal anything particularly interesting.
+
+#### Individual Words & Group Clusters  
+
+In order to prove/disprove our hypothesis, we have classified materials, objects, foods and spaces that one would typically find in more well off circumstances. We have made the following word cluster to proxy for wealth. They have been put in categories for ease of use on voyant.
+
+The x axis displays 20 documents in total, which is a collection of Louisa May Alcott's and Mark Twain's works. It first shows trends for Louisa May Alcott’s novels from 1865-1886, followed by trends for Mark Twain’s novels from 1873-1896.
+
+List of words taken together: 
+marble\*|silk\*|muslin\*|pearl\*|library\*|parlor\*|closet\*|cabinet\*|wine\*|cakes\*|gingerbread\*|lobster\*|toast\*|dress\*|bonnet\*|gown\*|gloves\*|ribbon\*|slippers\*|
+cloak\*|cigar\*|carriage\*|Book\*|Sofa\*|Curtain\*|Piano\*|Cups\*|Couch\*|Kettle\*|Bouquet\*|Pillows\*|Bowl\*|Vase\*|Cushions\*|Napkin\*|Teapot
+
+When all words are taken together, the trend line shows a stark decrease in the relative use of words that proxy for wealth throughout Twain’s works. This trend is visible for all the categories shown above. Even within each of the author’s works, relative use of items that proxy for wealth decline over time.  
+
+<iframe style='width: 477px; height: 418px;' src='https://voyant-tools.org/tool/Trends/?query=marble*%7Csilk*%7Cmuslin*%7Cpearl*%7Clibrary*%7Cparlor*%7Ccloset*%7Ccabinet*%7Cwine*%7Ccakes*%7Cgingerbread*%7Clobster*%7Ctoast*%7Cdress*%7Cbonnet*%7Cgown*%7Cgloves*%7Cribbon*%7Cslippers*%7Ccloak*%7Ccigar*%7Ccarriage*%7CBook*%7CSofa*%7CCurtain*%7CPiano*%7CCups*%7CCouch*%7CKettle*%7CBouquet*%7CPillows*%7CBowl*%7CVase*%7CCushions*%7CNapkin*%7CTeapot&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+##### Material: 
+Marble, Silk, Muslin, Pearl
+
+<iframe style='width: 477px; height: 418px;' src='https://voyant-tools.org/tool/Trends/?query=marble*%7Csilk*%7Cmuslin*%7Cpearl&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+##### Spaces 
+Library, Parlor, Closet, Cabinet, library  
+
+<iframe style='width: 706px; height: 418px;' src='https://voyant-tools.org/tool/Trends/?query=library*%7Cparlor*%7Ccloset*%7Ccabinet&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+##### Food 
+Wine, Cakes, Gingerbread, Lobster, Toast
+
+<iframe style='width: 706px; height: 418px;' src='https://voyant-tools.org/tool/Trends/?query=wine*%7Ccakes*%7Cgingerbread*%7Clobster*%7Ctoast&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+##### Clothing 
+Dress, Bonnet, Gown , Gloves, Ribbon, Slippers, Cloak, cigar
+
+<iframe style='width: 706px; height: 418px;' src='https://voyant-tools.org/tool/Trends/?query=dress*%7Cbonnet*%7Cgown*%7Cgloves*%7Cribbon*%7Cslippers*%7Ccloak*%7Ccigar&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+##### Transport
+Carriage 
+
+<iframe style='width: 706px; height: 418px;' src='https://voyant-tools.org/tool/Trends/?query=carriage*&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+##### Household Objects 
+Book, Sofa, Curtain, Piano, Cups, Couch, Kettle, Bouquet, Pillows, Bowl, Vase, Cushions, Napkin, Teapot
+
+<iframe style='width: 706px; height: 418px;' src='https://voyant-tools.org/tool/Trends/?query=Book*%7CSofa*%7CCurtain*%7CPiano*%7CCups*%7CCouch*%7CKettle*%7CBouquet*%7CPillows*%7CBowl*%7CVase*%7CCushions*%7CNapkin*%7CTeapot&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+Another interesting word to trace is money (dollars). We find the graph shown below. The trend is in stark contrast to the ones obtained before. One possible explanation is that the poor, due to its absence, tend to talk about money more than the rich. The fact that the only outlier to this in Twain’s half of the corpus is The Prince and The Pauper is also telling.
+
+<iframe style='width: 706px; height: 418px;' src='https://voyant-tools.org/tool/Trends/?query=money*%7Cdollar&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+We also wanted to see the trend of a material object that is related to the outdoors. In order to do this, we decided to compare the trend of ‘umbrella’ with that of ‘rain’. The results were very interesting. In Alcott’s half, the two closely follow each other, when frequency of rain increases, that of umbrella increases and vice versa. This is not true for Twain. The two, if anything, move in opposite directions and the trend line for rain is much higher than that of umbrella. We could interpret this to understand their relationship with the outdoors and care for one’s clothes. 
+
+<iframe style='width: 706px; height: 418px;' src='https://voyant-tools.org/tool/Trends/?query=umbrella*&query=rain*&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+We have taken a cluster of words that would be associated with relatively poorer circumstances. The crunch of words in this section is in itself significant for lack of wealth. The results are in line with our expectations - the trend line increases for Twain’s half of the corpus. 
+
+Iron, Mud, Leather, Timber, Rags 
+
+<iframe style='width: 751px; height: 419px;' src='https://voyant-tools.org/tool/Trends/?query=Iron*%7CMud*%7CLeather*%7CTimber*%7CRags&corpus=3813033db252225ef380a4c4b7b2ea7d' data-external = '1'></iframe>
+
+### Collocation/Correlation 
+
+#### Corpus 
+
+We were particularly interested in the use of *‘good’* and what other words it coincides with, given it is one of the most frequently used words in both the corpora. In Alcott’s corpus, *good* collocates with *said*, *deal*, *night*, *time* and *little*. In Twain, it is collocated with *deal*, *time*, *got*, *good* and *yes*. In both the texts good and deal, and good and time seem to occur together, possibly indicating positive occurrences and events in the characters lives. Words from the Alcott word map that stand out to us, with reference to our context, are *new*, *things*, *home*, and *old*. From the Twain corpus, we are interested in the occurrence of *old*, *house*, *things*, *poor*, and *place*. In the Alcott corpus, we want to see what is collocated with our words of interest. Some of the collocates for things are *want*, *can’t*, *make*, *like* and *good*. *New* is collocated with *like*, *friends*, *things* and *home*. *Home* is collocated with *happy*, *mother*, *little* and *make*, signifying a warm and nurturing environment. Finally, old is collocated with people - words like *lady*, *gentleman*, and *man*. Another interesting collocate of *old* is *fashioned*. On doing the same exercise with the Twain corpus, we find that *old* is collocated with *man*, *gentleman*, *time* and *lady*, similar to the other corpus. *House* is collocated with *old* and *night*, which is quite different from Alcott’s corpus. Collocates for things are *said*, *going*, *got*, and *say*. Poor is collocated with *little*, *old*, *boy*, *fellow*, *child* and *lad*. *Place* is collocated with *took*, *got*, *come*, *time*, *went* and *away*. 
+
+It’s interesting to note the use of the word *home* with Louisa May Alcott and the use of the word *house* with Mark Twain. While both words occur in both corpuses, *home* occurs more than *house* in Alcott and *house* occurs more than *home* in Twain. *Home* in Alcott is collocated with words that when coupled with home signify warmth, whereas collocates of house in Alcott are *old*, *went*, *place*, *saw*, *door* and *great*, implying something impersonal. *Home* in Twain is collocated with *good*, *make* and *away*, and *house* is collocated with *old*, *night*, and *went*. None of the words seem to capture the homeliness one might expect from the mention of home. Another interesting finding is the collocates of things in the 2 corpuses. Its usage in Alcott signifies something physical (want things, make things, good things, like things) as opposed to Twain (said things, things going, say things). Ofcourse, it’s not possible to know the order in which these words occur and is based only on our deduction. Lastly, new is one of the more frequently used words in Alcott but does not make it to the same list for twain. In fact, the collocates of new in twain are places- Orleans, York, and England. These findings are indicative of a more material world around the Alcott corpus. 
+
+#### Specific words/clusters
+
+We wanted to see how some of the words that signify wealth and poverty feature in the 2 corpora. In Alcott, *silk* is collocated with *dress*, *wear*, *apron* and *lace* - all items of clothing. However, in Twain it is collocated with *velvet*, *cloth*, *jewels*, *naked* and *satin*- other materials (barring naked). *Cabinet* in Alcott is collocated with *stood*, *drawers*, *piano*, *door*, *open* whereas in Twain it is collocated with *minister*, *palace*, *wife* and *left*, implying use in the former and a political position in the latter. *Wine* in Alcott is collocated with *bottle*, *glass*, *lips* and *little*, and in Twain it is collocated with *attempts*, *gallon*, *applied* and *assert*. The word *cake* reveals a particularly interesting finding, it is collocated with *little*, *like*, *fruit*, *make* and *Mrs.* in Alcott, but in Twain its collocate is *divided*. *Gloves* is collocated with *pair*, *wear*, *hands*, *Meg* and *Polly* in Alcott implies use and ownership. In Twain it is collocated with *appeared* and *damaged*. *Carriage* is collocated with *away*, *rolled*, *Mrs*, *drove* and *waiting* in Alcott, again implying use. In Twain, it is collocated with *right*, *old*, *thronged*, and *step*. *Cushion* is collocated with *lay*, *chair*, *head*, *sat* in Alcott and *base*, *body*, and *buried* in Twain. We were compelled to do the same exercise with *rain* given the interesting result earlier. We found that in Alcott, it is collocated with *day* and *falling* whereas in Twain it is collocated with *thunder*, *tears* and *poured*. The collocate for *mud* in Alcott is *pies* whereas in Twain it is *turtle* and *black*. 
+
+### Third tool
+
+#### Explanation & Motivation
+
+We have used the stream graph visualisation tool. It is a visualization of the changing frequency of words in a given corpus. Since our hypothesis is to show how relatively densely populated the corpora are with words that imply wealth or poverty, we are motivated by the visuals presented by this tool. 
+
+#### Result
+
+To study the changing frequency of words implying wealth we used the same cluster as the one used for collocation analysis. The first panel is relative frequency and the second is raw frequency. Both show how densely populated the first half of the corpus is relative to the second half. The difference is more stark with raw frequency, naturally, as the total number of words in Alcott's half of the corpus is more. 
+
+<iframe style='width: 779px; height: 418px;' src='https://voyant-tools.org/tool/StreamGraph/?limit=7&stopList=&query=cake&query=gloves*&query=piano&query=wine&query=cushion&query=cabinet&query=silk%2Cwine%2Cpiano%2Ccake%2Ccushion%2Cgloves*%2Ccabinet&bins=20&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+<iframe style='width: 779px; height: 418px;' src='https://voyant-tools.org/tool/StreamGraph/?limit=7&stopList=&query=silk&query=cake&query=gloves*&query=piano&query=cushion&query=cabinet&query=wine%2Ccabinet%2Cpiano&withDistributions=raw&bins=20&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+
+We used the same tool for the cluster of words implying poverty. The first panel is relative frequency and the second is raw frequency. The results are as expected, with a densely populated latter half. 
+
+<iframe style='width: 677px; height: 419px;' src='https://voyant-tools.org/tool/StreamGraph/?limit=6&stopList=&query=iron&query=mud&query=rags&query=leather&query=timber&query=timber%2Ciron%2Cmud%2Crags%2Cleather&bins=20&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+<iframe style='width: 677px; height: 418px;' src='https://voyant-tools.org/tool/StreamGraph/?limit=6&stopList=&query=iron&query=mud&query=rags&query=leather&query=timber&query=timber%2Ciron%2Cmud%2Crags%2Cleather&withDistributions=raw&bins=20&corpus=5e996cdd2c4b530d71916cbec322d5be' data-external = '1'></iframe>
+
+### Conclusion
+This project attempts to see how frequently material objects are mentioned in Louisa May Alcott’s work as compared to that of Mark Twain’s, in order to deduce class differences from our findings. All three of our analyses support our hypothesis which expected Alcott’s work to be more densely populated with goods of luxury, compared to Twain. When words that could indicate luxury, such as *silk*, *teapot* and *library* are clustered together, there is a clear dip in the trend line for Twain’s half of the corpus. Conversely, words that proxy for poorer circumstances such as *mud* and *timber* show an increase in the trend line for Twain’s half. On digging deeper into some of these words by using collocation analysis, we find that the collocates in Alcott’s corpus indicate use of material things, something that, for the most part, is missing  in Twain’s corpus. For example, *cabinet* is used in Alcott’s corpus to mean furniture but in Twain’s corpus it is used in the context of the political body. *Mud* is collocated with *pie* in Alcott and with *turtle* in Twain. Lastly, our visualization tool allows us to visually note the change in relative frequency in the proxy words between the two corpora. Both the relative and raw comparisons show how densely and sparsely each half is populated with our chosen word clusters. The results show Alcott’s corpus to be more populated with goods of luxury and Twain’s corpus to be more populated with words that signify poverty. 
+
+### Reflection
+While we did find results to corroborate our hypothesis, it is an imperfect study due to the limitations Voyant poses. The most significant one is the inability to hold other variables constant. We wanted to explore the relative population of items of wealth stemming from class differences in the two corpora. While we attribute the results to class differences, there are other factors that could influence our results - the most glaring one being gender. If women in 19th century America tend to write more intensely about domestic space than men, you would expect their text to be more populated with items of domestic use, such as teapot, cabinet, kettle, pillows etc. Conversely, the use of outdoor materials such as mud and timber would be relatively higher in texts written by male authors. If this is the case, our study suffers from an upward bias because Voyant is unable to differentiate between the different factors that lead to the effect we find. Simultaneously, our study suffers from a downward bias because of the different meanings of words, which voyant is unable to differentiate between. In the context of both a piece of furniture, and the political body shows up as one word - cabinet. When it is used as the latter, it has no relevance in the context of studying material objects, nonetheless it is detected, creating bias which is negative in our case (as it occurs in this manner in Twain’s corpus). On similar lines, we cannot know for sure whether the words that are occurring are physically part of the setting or whether they are being mentioned by characters in want of such objects. Collocation analysis can provide some insight into the context surrounding these words but it still poses a limitation. Interpretation of the collocates also suffers from bias as it is guided by our assumptions about the text. Voyant gives the data, which is supposedly objective but suffers from the biases outlined above, however, the interpretation of data remains subjective. 
+
